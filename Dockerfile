@@ -86,7 +86,7 @@ RUN mkdir -p /usr/local/bin
 
 COPY runrserver.sh /usr/local/bin/runrserver.sh
 
-EXPOSE 6311
+EXPOSE 6312
 
 CMD ["runrserver.sh"]
 

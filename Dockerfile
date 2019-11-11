@@ -79,8 +79,9 @@ VOLUME /rserver
 
 # RServe : configuration file
 # --------------------------------------------------------------------------------------------
-RUN mkdir -p /var/www/r_storage/RExec
 COPY Rserv.conf /etc/Rserv.conf 
+
+RUN mkdir -p /var/www/r_storage/RExec
 
 RUN mkdir -p /usr/local/bin
 

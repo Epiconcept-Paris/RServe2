@@ -27,4 +27,5 @@ root        17  0.0  0.5  194280  61896 ?      Ss   16:39   0:00 /usr/lib/R/bi/R
 root        27  0.0  0.4  196332  60216 ?      S    16:46   0:00 /usr/lib/R/bi/RsrvCHq --no-save   
 root        29  0.1  1.5 3481784 189084 ?      Sl   16:47   0:01 **/usr/lib/R/bi/RsrvCHq --no-save**   
 
-Comme on peut le voir, la mémoire demandée par un simple script est d'environ **3.4Go**!
+Comme on peut le voir, la mémoire demandée par un simple script est d'environ **3.4Go**! Il faudra donc prévoir de la mémoire suffisante pour faire exécuter au minimum 4 scripts simultanés par le container. 24Go (soit 4 * 6) semble minimal.
+

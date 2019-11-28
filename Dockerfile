@@ -71,19 +71,24 @@ RUN mkdir -p /tmp/RServerUtils && \
 		rm -rf /tmp/RServerUtils /tmp/RServerUtils_${rsutils_version}.tar.gz
 
 
+# Libraries for PDF output
+# --------------------------------------------------------------------------------------------
+RUN apt-get update && apt-get install -y texlive-latex-base texlive-fonts-recommended \
+    texlive-latex-recommended texlive-latex-extra && \
+    apt-get clean 
+
 # RServe : https://rforge.net/src/contrib/
 # --------------------------------------------------------------------------------------------
-RUN mkdir /rserver
+RUN mkdir /rservertexlive-latex-recommended
 VOLUME /rserver
 
 
 # RServe : configuration file
 # --------------------------------------------------------------------------------------------
 COPY Rserv.conf /etc/Rserv.conf 
-
 RUN mkdir -p /var/www/r_storage/RExec
-
 RUN mkdir -p /usr/local/bin
+
 
 COPY runrserver.sh /usr/local/bin/runrserver.sh
 
